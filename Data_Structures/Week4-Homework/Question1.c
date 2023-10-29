@@ -14,8 +14,11 @@ struct Node {
     int data;
     struct Node* next;
 };
+//addFront fonksiyonu tek sayıları listenin başına ekliyor.
 struct Node* addFront(struct Node* head, int value);
+//addLast fonksiyonu çift sayıları listenin sonuna ekliyor.
 struct Node* addLast(struct Node* head, int value);
+//buildList fonksiyonu -1 girilene kadar kullanicidan deger aliyor.
 struct Node* buildList();
 
 int main() {
@@ -72,7 +75,7 @@ struct Node* buildList() {
         int number;
         printf("Enter a number: ");
         scanf("%d", &number);
-        
+        //Girilen sayi tek mi, cift mi yoksa -1 mi diye filtreleniyor.
         if (number == -1) {
             continueInput = 0;
         } else if (number % 2 == 0) {
